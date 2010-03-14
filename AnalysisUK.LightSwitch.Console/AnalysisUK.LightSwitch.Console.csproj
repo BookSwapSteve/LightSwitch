@@ -39,7 +39,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="DeviceSolutions.SPOT.Hardware.MeridianP, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="DeviceSolutions.SPOT.Hardware.MeridianP, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Support\DeviceSolutions.SPOT.Hardware.MeridianP.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.SPOT.Hardware" />
     <Reference Include="Microsoft.SPOT.Native">
     </Reference>
