@@ -9,6 +9,4 @@ Thumbs.db
 Debug/
 Release/
 *DXCore.Solution/
-/Web/PodMarker.DataAccess.NHibernate.Tests/TestData/BackupData.xml
-/Web/Build/Reports/UnitTests/UnitTestResults.xml
-/Web/TestResults/*
+AnalysisUK.LightSwitch.Console/OnBoardFlash.dat
