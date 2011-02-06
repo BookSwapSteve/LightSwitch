@@ -1,6 +1,11 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9ED4395B-223F-454A-A11A-84A25E239496}"
+	ProjectSection(SolutionItems) = preProject
+		ReadMe.txt = ReadMe.txt
+	EndProjectSection
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnalysisUK.LightSwitch.Console", "AnalysisUK.LightSwitch.Console\AnalysisUK.LightSwitch.Console.csproj", "{64936771-1FD7-4C36-A190-901084195219}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnalysisUK.LightSwitch.WindowApp", "AnalysisUK.LightSwitch.WindowApp\AnalysisUK.LightSwitch.WindowApp.csproj", "{EAA115C5-A7FB-4555-80B6-71D9EFB34D9C}"
@@ -12,11 +17,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnalysisUK.LightSwitch.Core", "AnalysisUK.LightSwitch.Core\AnalysisUK.LightSwitch.Core.csproj", "{416A07EE-9FAE-491F-9F4A-D92C03C18267}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnalysisUK.LightSwitch.Utilities", "AnalysisUK.LightSwitch.Utilities\AnalysisUK.LightSwitch.Utilities.csproj", "{4F396E5E-5991-4AEA-9533-3CF98B6132E5}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9ED4395B-223F-454A-A11A-84A25E239496}"
-	ProjectSection(SolutionItems) = preProject
-		ReadMe.txt = ReadMe.txt
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

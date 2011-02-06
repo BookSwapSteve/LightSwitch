@@ -44,7 +44,7 @@ namespace AnalysisUK.LightSwitch.WindowApp
             mainWindow.Child = text;
 
             // Connect the button handler to all of the buttons.
-            mainWindow.AddHandler(Buttons.ButtonUpEvent, new ButtonEventHandler(OnButtonUp), false);
+            mainWindow.AddHandler(Buttons.ButtonUpEvent, new RoutedEventHandler(OnButtonUp), false);
 
             // Set the window visibility to visible.
             mainWindow.Visibility = Visibility.Visible;
@@ -55,10 +55,10 @@ namespace AnalysisUK.LightSwitch.WindowApp
             return mainWindow;
         }
 
-        private void OnButtonUp(object sender, ButtonEventArgs e)
+        private void OnButtonUp(object sender, RoutedEventArgs routedEventArgs)
         {
             // Print the button code to the Visual Studio output window.
-            Debug.Print(e.Button.ToString());
+            Debug.Print(routedEventArgs.Source.ToString());
         }
     }
 }

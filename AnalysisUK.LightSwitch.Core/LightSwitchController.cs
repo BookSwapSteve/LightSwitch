@@ -77,7 +77,7 @@ namespace AnalysisUK.LightSwitch
                     Log.Message(System.DateTime.UtcNow.ToString());
 
                     // Sync the timeservice when prompted - no timeout! - crashes!
-                    //NetworkController.TimeSyncService.Syncronise();
+                    NetworkController.TimeSyncService.Syncronise();
 
                     NetworkController.TimeSyncService.Start();
 
