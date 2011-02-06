@@ -6,9 +6,10 @@ Requirements:
 ------------------------------------------------------------------------------------------------
 Required VS2008 SP1 (VS2010 won't work with MF 4).
 
-.Net MicroFramework V4 (http://www.microsoft.com/downloads/details.aspx?FamilyId=77dbfc46-14a1-4dcf-a809-eda7ccfe376b&displaylang=en)
+.Net MicroFramework V4.1
+ (http://www.microsoft.com/downloads/details.aspx?FamilyId=77dbfc46-14a1-4dcf-a809-eda7ccfe376b&displaylang=en)
 
-Device Solutions SDK (V4.0) (http://devicesolutions.net/Support/Downloads.aspx)
+Device Solutions SDK (V4.1) (http://devicesolutions.net/Support/Downloads.aspx)
 
 Developed working against the Meridian/P (http://devicesolutions.net/Products/MeridianP.aspx) and ethernet adapter.
 
