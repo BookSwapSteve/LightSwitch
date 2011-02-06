@@ -68,7 +68,7 @@ namespace AnalysisUK.LightSwitch.Sensors.IR
             Data = GetCode(totalhalfBits, stateStream);
 
             // Let's see what we got!
-            Debug.Print("Mode = " + Mode + " trailer = " + trailer + "Command / data = 0x" + data + " = " + data);
+            Debug.Print("Mode = " + Mode + " trailer = " + Trailer + "Command / data = 0x" + Data + " = " + Data);
 
             //if (CodeReceived != null)
             //  CodeReceived(mode, data);

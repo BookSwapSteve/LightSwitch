@@ -5,14 +5,14 @@ namespace AnalysisUK.LightSwitch.Sensors.IR
     [Serializable]
     public class InvalidIrMessageException : Exception
     {
-        public InvalidMessageException() : base()
+        public InvalidIrMessageException() : base()
         { }
 
-        public InvalidMessageException(string message)
+        public InvalidIrMessageException(string message)
             : base(message)
         { }
 
-        public InvalidMessageException(string message, Exception innerException)
+        public InvalidIrMessageException(string message, Exception innerException)
             : base(message, innerException)
         { }
     }
