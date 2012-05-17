@@ -1,12 +1,10 @@
-using System;
 using AnalysisUK.LightSwitch.Sensors.Audio;
 using AnalysisUK.LightSwitch.Sensors.Humidity;
 using AnalysisUK.LightSwitch.Sensors.KeyPad;
 using AnalysisUK.LightSwitch.Sensors.LED;
 using AnalysisUK.LightSwitch.Sensors.Temperature;
-using DeviceSolutions.SPOT.Hardware;
-using Microsoft.SPOT;
 using Microsoft.SPOT.Hardware;
+using SecretLabs.NETMF.Hardware.Netduino;
 
 namespace AnalysisUK.LightSwitch.Sensors
 {
@@ -20,8 +18,8 @@ namespace AnalysisUK.LightSwitch.Sensors
             AudioInSensor = new NullMicrophone();
             AudioOut = new NullSpeaker();
             HumiditySensor = new NullHumiditySensor();
-            KeyPad = new SingleKeyPad(new InputPort(MeridianP.Pins.SW1, true, Port.ResistorMode.PullUp));
-            LedController = new LedController(new OutputPort(MeridianP.Pins.LED, true));
+            KeyPad = new SingleKeyPad(new InputPort(Pins.ONBOARD_SW1, true, Port.ResistorMode.PullUp));
+            LedController = new LedController(new OutputPort(Pins.ONBOARD_LED, true));
             TemperatureSensor = new NullTemperatureSensor();
         }
 

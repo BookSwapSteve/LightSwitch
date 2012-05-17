@@ -1,7 +1,5 @@
-using System;
-using System.Threading;
-using DeviceSolutions.SPOT.Hardware;
 using Microsoft.SPOT.Hardware;
+using SecretLabs.NETMF.Hardware.Netduino;
 
 namespace AnalysisUK.LightSwitch.Sensors.LED
 {
@@ -11,7 +9,8 @@ namespace AnalysisUK.LightSwitch.Sensors.LED
 
         #region Constructors
 
-        public LedController() : this(new OutputPort(MeridianP.Pins.LED, true))
+        public LedController()
+            : this(new OutputPort(Pins.ONBOARD_LED, true))
         { }
 
         public LedController(OutputPort led)

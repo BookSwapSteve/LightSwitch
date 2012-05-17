@@ -36,36 +36,26 @@
   </PropertyGroup>
   <Import Project="$(NetMfTargetsBaseDir)$(TargetFrameworkVersion)\CSharp.Targets" />
   <ItemGroup>
+    <Compile Include="HttpPost.cs" />
     <Compile Include="INetworkController.cs" />
     <Compile Include="NetworkController.cs" />
-    <Compile Include="PageReader.cs" />
+    <Compile Include="PageReader.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Time\ITimeSync.cs" />
     <Compile Include="Time\TimeSync.cs" />
-    <Compile Include="WebServer\IWebServer.cs" />
-    <Compile Include="WebServer\NullWebServer.cs" />
-    <Compile Include="WebServer\RESTService\ActionResult.cs" />
-    <Compile Include="WebServer\RESTService\ControllerBase.cs" />
-    <Compile Include="WebServer\RESTService\TemperatureController.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="DeviceSolutions.SPOT.Hardware.MeridianP, Version=4.1.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.SPOT.Native">
     </Reference>
     <Reference Include="Microsoft.SPOT.Net" />
     <Reference Include="Microsoft.SPOT.Time" />
+    <Reference Include="System" />
     <Reference Include="System.Http" />
+    <Reference Include="System.Net.Security" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AnalysisUK.LightSwitch.Utilities\AnalysisUK.LightSwitch.Utilities.csproj">
-      <Project>{4F396E5E-5991-4AEA-9533-3CF98B6132E5}</Project>
-      <Name>AnalysisUK.LightSwitch.Utilities</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="RESTClient\" />
-    <Folder Include="RssReader\" />
     <Folder Include="SmsSender\" />
-    <Folder Include="Twitter\" />
   </ItemGroup>
 </Project>

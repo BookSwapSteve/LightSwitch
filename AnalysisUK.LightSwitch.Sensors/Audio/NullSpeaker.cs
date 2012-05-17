@@ -1,5 +1,3 @@
-using System;
-using AnalysisUK.LightSwitch.Utilities.Logger;
 using Microsoft.SPOT;
 
 namespace AnalysisUK.LightSwitch.Sensors.Audio
@@ -8,7 +6,7 @@ namespace AnalysisUK.LightSwitch.Sensors.Audio
     {
         public void Beep()
         {
-            Log.Message("Play Beep");
+            Debug.Print("Play Beep");
         }
     }
 }

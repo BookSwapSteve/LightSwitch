@@ -1,9 +1,8 @@
-﻿using System;
+﻿
+using AnalysisUK.LightSwitch.Network;
 using AnalysisUK.LightSwitch.Sensors.IR;
 using AnalysisUK.LightSwitch.Sensors.Sound;
-using AnalysisUK.LightSwitch.Utilities.Logger;
 using Microsoft.SPOT;
-using DeviceSolutions.SPOT.Hardware;
 using Microsoft.SPOT.Hardware;
 using System.Threading;
 
@@ -13,7 +12,7 @@ namespace AnalysisUK.LightSwitch.Console
     {
         public static void Main()
         {
-            Log.Message("LightSwitch Main Entered");
+            Debug.Print("LightSwitch Main Entered");
 
             //TestMP3PLayback();
 
@@ -23,8 +22,13 @@ namespace AnalysisUK.LightSwitch.Console
             //controller.Initialize();
             //controller.Start();
 
+            Thread.Sleep(20000);
+            var networkController = new NetworkController();
+            networkController.Initialise();
+
+
             Thread.Sleep(Timeout.Infinite);
-            Log.Message("LightSwitch Exiting");
+            Debug.Print("LightSwitch Exiting");
         }
 
         private static void TestIrReceiver()
@@ -41,8 +45,8 @@ namespace AnalysisUK.LightSwitch.Console
 
         private void OldMain()
         {
-            OutputPort led = new OutputPort(MeridianP.Pins.LED, true);
-            InputPort button = new InputPort(MeridianP.Pins.SW1, true, Port.ResistorMode.PullUp);
+            OutputPort led = new OutputPort(SecretLabs.NETMF.Hardware.Netduino.Pins.GPIO_PIN_D9, true);
+            InputPort button = new InputPort(SecretLabs.NETMF.Hardware.Netduino.Pins.GPIO_PIN_D1, true, Port.ResistorMode.PullUp);
 
             while (true)
             {

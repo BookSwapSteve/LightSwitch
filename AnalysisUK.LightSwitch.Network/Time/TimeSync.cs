@@ -1,18 +1,17 @@
 using System;
-using System.IO;
-using System.Net;
-using System.Text;
-using System.Threading;
-using AnalysisUK.LightSwitch.Utilities.Logger;
 using Microsoft.SPOT;
-using Microsoft.SPOT.Net.NetworkInformation;
 using Microsoft.SPOT.Time;
 
 namespace AnalysisUK.LightSwitch.Network.Time
 {
     public class TimeSync : ITimeSync
     {
-        private static bool started;
+        private static bool _started;
+
+        public TimeSync()
+        {
+            _started = false;
+        }
 
         /// <summary>
         /// Configure the time sync service
@@ -49,7 +48,7 @@ namespace AnalysisUK.LightSwitch.Network.Time
 
         public void Start()
         {
-            if (!started)
+            if (!_started)
             {
                 TimeService.Start();
             }
@@ -62,12 +61,12 @@ namespace AnalysisUK.LightSwitch.Network.Time
 
         void TimeService_TimeSyncFailed(object sender, TimeSyncFailedEventArgs e)
         {
-            Log.Message("Failed time sync." + e.ErrorCode);
+            Debug.Print("Failed time sync." + e.ErrorCode);
         }
 
         void TimeService_SystemTimeChanged(object sender, SystemTimeChangedEventArgs e)
         {
-            Log.Message("System time changed." + e.EventTime);
+            Debug.Print("System time changed." + e.EventTime);
         }
     }
 }

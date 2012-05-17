@@ -45,17 +45,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AnalysisUK.LightSwitch.Network\AnalysisUK.LightSwitch.Network.csproj">
-      <Project>{5D1C5B0D-E45B-452C-8333-B3A5DEC6C24E}</Project>
-      <Name>AnalysisUK.LightSwitch.Network</Name>
-    </ProjectReference>
     <ProjectReference Include="..\AnalysisUK.LightSwitch.Sensors\AnalysisUK.LightSwitch.Sensors.csproj">
       <Project>{4D9C62AE-5B06-4334-A7F8-E04F248C65B2}</Project>
       <Name>AnalysisUK.LightSwitch.Sensors</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\AnalysisUK.LightSwitch.Utilities\AnalysisUK.LightSwitch.Utilities.csproj">
-      <Project>{4F396E5E-5991-4AEA-9533-3CF98B6132E5}</Project>
-      <Name>AnalysisUK.LightSwitch.Utilities</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

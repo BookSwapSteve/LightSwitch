@@ -61,8 +61,8 @@ namespace AnalysisUK.LightSwitch.Sensors.IR
 
             try
             {
-                var message = new Rc6Message();
-                message.Decode(_bitTimes, _signalStates);
+                var decoder = new IrDecoder();
+                bool[] signal = decoder.Decode(_bitTimes, _signalStates);
 
                 // TODO: Do somethig with the message.
             }

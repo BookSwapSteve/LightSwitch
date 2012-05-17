@@ -1,9 +1,6 @@
 using System;
 using System.Threading;
-using AnalysisUK.LightSwitch.Network;
 using AnalysisUK.LightSwitch.Sensors;
-using AnalysisUK.LightSwitch.Utilities;
-using AnalysisUK.LightSwitch.Utilities.Logger;
 using Microsoft.SPOT;
 
 namespace AnalysisUK.LightSwitch
@@ -16,27 +13,17 @@ namespace AnalysisUK.LightSwitch
         #region Constructors
 
         public LightSwitchController()
-            : this(new NetworkController(), new SensorsController())
+            : this(new SensorsController())
         { }
 
-        public LightSwitchController(INetworkController networkController, ISensorsController sensorController)
+        public LightSwitchController(ISensorsController sensorController)
         {
-            NetworkController = networkController;
             SensorsController = sensorController;
-
-            // Store these away so we can get them back in other objects (i.e. network handler).
-            IoCContainer.Store(NetworkController);
-            IoCContainer.Store(SensorsController);
         }
 
         #endregion
 
         #region Dependency Injection Properties
-
-        protected INetworkController NetworkController
-        {
-            get; set;
-        }
 
         protected ISensorsController SensorsController
         {
@@ -47,9 +34,8 @@ namespace AnalysisUK.LightSwitch
 
         public void Initialize()
         {
-            Log.Message("Initializing LightSwitch Controller");
+            Debug.Print("Initializing LightSwitch Controller");
             SensorsController.Initialise();
-            NetworkController.Initialise();
         }
 
         /// <summary>
@@ -57,10 +43,9 @@ namespace AnalysisUK.LightSwitch
         /// </summary>
         public void Start()
         {
-            Log.Message("Starting LightSwitch Controller");
+            Debug.Print("Starting LightSwitch Controller");
 
             SensorsController.Start();
-            NetworkController.Start();
 
             // Show the LED on to indicate started.
             SensorsController.LedController.On();
@@ -74,12 +59,7 @@ namespace AnalysisUK.LightSwitch
                     SensorsController.LedController.On();
                     Thread.Sleep(500);
 
-                    Log.Message(System.DateTime.UtcNow.ToString());
-
-                    // Sync the timeservice when prompted - no timeout! - crashes!
-                    NetworkController.TimeSyncService.Syncronise();
-
-                    NetworkController.TimeSyncService.Start();
+                    Debug.Print(System.DateTime.UtcNow.ToString());
 
                     SensorsController.LedController.Off();
                     Thread.Sleep(200);

@@ -45,7 +45,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="DeviceSolutions.SPOT.Hardware.MeridianP, Version=4.1.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.SPOT.Graphics" />
     <Reference Include="Microsoft.SPOT.Hardware" />
     <Reference Include="Microsoft.SPOT.Native">
@@ -72,10 +71,6 @@
     <ProjectReference Include="..\AnalysisUK.LightSwitch.Sensors\AnalysisUK.LightSwitch.Sensors.csproj">
       <Project>{4D9C62AE-5B06-4334-A7F8-E04F248C65B2}</Project>
       <Name>AnalysisUK.LightSwitch.Sensors</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\AnalysisUK.LightSwitch.Utilities\AnalysisUK.LightSwitch.Utilities.csproj">
-      <Project>{4F396E5E-5991-4AEA-9533-3CF98B6132E5}</Project>
-      <Name>AnalysisUK.LightSwitch.Utilities</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
